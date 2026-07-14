@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Temperature Converter</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="ShivamKumar_Task3.css">
+</head>
+<body>
+  <main class="app-shell">
+    <section class="converter-card" aria-labelledby="app-title">
+      <p class="eyebrow">Task 3</p>
+      <h1 id="app-title">Temperature Converter</h1>
+      <p class="subtitle">Convert between Celsius, Fahrenheit, and Kelvin with instant validation.</p>
+
+      <form id="converter-form" novalidate>
+        <div class="field-group">
+          <label for="temperature-input">Temperature value</label>
+          <input id="temperature-input" name="temperature" type="number" step="any" inputmode="decimal" placeholder="Enter a value" aria-describedby="input-help input-error">
+          <p id="input-help" class="help-text">Only numeric input is accepted.</p>
+          <p id="input-error" class="error-text" aria-live="polite"></p>
+        </div>
+
+        <div class="field-grid">
+          <div class="field-group">
+            <label for="input-unit">Input unit</label>
+            <select id="input-unit" name="input-unit">
+              <option value="celsius">Celsius (°C)</option>
+              <option value="fahrenheit">Fahrenheit (°F)</option>
+              <option value="kelvin">Kelvin (K)</option>
+            </select>
+          </div>
+
+          <div class="field-group">
+            <label for="output-mode">Output display</label>
+            <select id="output-mode" name="output-mode">
+              <option value="all">Show all units</option>
+              <option value="single">Show only converted unit</option>
+            </select>
+          </div>
+        </div>
+
+        <button type="submit" class="convert-button">Convert</button>
+      </form>
+
+      <section class="results-panel" aria-live="polite" aria-atomic="true">
+        <h2>Results</h2>
+        <p id="status-message" class="status-message">Enter a value and press Convert.</p>
+        <div id="results-grid" class="results-grid">
+          <article class="result-tile">
+            <span class="result-label">Celsius</span>
+            <strong id="celsius-result">--</strong>
+          </article>
+          <article class="result-tile">
+            <span class="result-label">Fahrenheit</span>
+            <strong id="fahrenheit-result">--</strong>
+          </article>
+          <article class="result-tile">
+            <span class="result-label">Kelvin</span>
+            <strong id="kelvin-result">--</strong>
+          </article>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <script src="ShivamKumar_Task3.js"></script>
+</body>
+</html>
